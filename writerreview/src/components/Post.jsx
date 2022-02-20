@@ -25,11 +25,14 @@ return (
 		</div>
 		<div>
 			<form>
-				<label>
+				<h5>
 				Leave a Review!
+				<br></br>
 					<input type="text"></input>
-					<button>Submit</button>
-				</label>
+					<br></br>
+				</h5>
+				<button>Submit</button>
+
 			</form>
 		</div>
 	</div>

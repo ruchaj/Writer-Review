@@ -5,6 +5,13 @@
     padding: 3%;
     margin: 0 2%;
 }
+h5 {
+    font-family: 'Redressed';
+    font-size:  20px;
+    color: purple;
+    margin-bottom: 20px;
+  }
+  
 .heading {
     height: 126px;
     text-align: center;
@@ -16,10 +23,10 @@
     height: 210px;
 }
 button{
-    align-items: center;
-    text-align: bottom;
-    font-family: 'Merriweather';
-    padding: 5px 0;
-    background-color: cornsilk;
-    color: black;
-  }
+  align-items: center;
+  text-align: bottom;
+  font-family: 'Merriweather';
+  padding: 5px 0;
+  background-color: cornsilk;
+  color: black;
+}
