@@ -22,30 +22,16 @@ return (
 		<p>{body}</p>
 		<div className="info">	
 			<h4>Written by: {author}</h4>
-			<h4>Write a Review</h4>
 		</div>
 		<div>
-		
+			<form>
+				<label>
+				Leave a Review!
+					<input type="text"></input>
+					<button>Submit</button>
+				</label>
+			</form>
 		</div>
-	{/* <h1 className="heading">Write a Review</h1>
-        <form onSubmit={this.handleSubmit}>
-            <label>
-                Review: <input type="text" value={this.state.value} onChange={this.handleChange}/>
-                <button onClick={this.handleSubmit}>Submit</button>
-            </label>
-        </form> */}
-	
-	{/* <BrowserRouter>
-		<div>
-			<div>
-				<Link to ="/Review">Review</Link>
-			</div>
-				<Routes>
-					<Route path="/Review" component={Review}
-					/>
-				</Routes>
-		</div>
-	</BrowserRouter> */}
 	</div>
 	
 );
