@@ -1,10 +1,6 @@
-@media all and (min-width: 480px) {
-  .Login {
-    padding: 60px 0;
-  }
-
-  .Login form {
-    margin: 0 auto;
-    max-width: 320px;
-  }
+body {
+  align-items: center;
+  text-align: center;
+  font-family: 'Merriweather';
+  padding: 50px 0;
 }
