@@ -16,3 +16,11 @@ body {
 img {
   filter: sepia(60%);
 }
+button{
+  align-items: center;
+  text-align: bottom;
+  font-family: 'Merriweather';
+  padding: 5px 0;
+  background-color: cornsilk;
+  color: black;
+}

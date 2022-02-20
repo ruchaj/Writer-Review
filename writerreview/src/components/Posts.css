@@ -1,8 +1,18 @@
 body {
-    background-color: #sepia;
+    background-color: sepia;
 }
 .posts-container {
+    font-size:  15px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+button{
+    align-items: center;
+    text-align: bottom;
+    font-family: 'Merriweather';
+    padding: 5px 0;
+    background-color: cornsilk;
+    color: black;
+  }

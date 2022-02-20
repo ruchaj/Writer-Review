@@ -1,7 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Post.css";
+import Review from "./Review"
 const Post = ({ post: { title, body,
 imgUrl, author }, index }) => {
+
+	
 return (
 	<div className="post-container">
 	<h1 className="heading">{title}</h1>
@@ -10,7 +14,11 @@ return (
 	<div className="info">	
 		<h4>Written by: {author}</h4>
 	</div>
+	<button>
+              Review
+            </button>
 	</div>
+	
 );
 };
 
