@@ -4,6 +4,7 @@ import "./App.css";
 
 import Posts from "./components/Posts";
 import Post from "./components/Post";
+import Review from "./components/Review";
   
 const App = () => {
     const [username, setUsername] = useState("");

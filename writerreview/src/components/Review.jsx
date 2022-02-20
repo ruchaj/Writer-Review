@@ -1,4 +1,7 @@
+import React, { Component } from "react";
+import { withRouter, observer } from "react-router-dom";
 import "./Review.css";
+
 const Review = ({ post: { body, author }, index }) => {
      
     const handleChange = (event) => {
@@ -26,4 +29,4 @@ const Review = ({ post: { body, author }, index }) => {
         
     );
     };
-export default Review;
+export default Review
