@@ -38,14 +38,14 @@ const Posts = () => {
     {
       title: "Supernature",
       body: `I come from the year 3500. The universe I live in is the opposite of what it was 1500 years ago. No longer is Earth grouped of hundreds of nations, many warring against each other, even more in abject poverty. In 2250, a super volcano erupted in Yellowstone National Park, destroying what was once known as the Americas. Without the formerly greatest world power to maintain balance, the world became chaotic. Finally, three leaders rose up and united what was left of the world into Terra.  `,
-      author: "Luarytza Bui",
+      author: "Haley Uyeunten",
       imgUrl:
         "https://i.pinimg.com/originals/ae/df/1a/aedf1ad892fe7036b97f0552ca0ae9e6.png",
     },
     {
       title: "Worlds Collide 2",
       body: `We take hold of the scepter and I channel the transportation through the scepter. We land in a tense battle and immediately begin functioning with our other halves. Eve and Jay managed to join as well, and the combined firepower is enough to subdue Jekyll.  `, 
-      author: "Viv Grenouille",
+      author: "Rucha Joshi",
       imgUrl:
         "https://i.pinimg.com/originals/0d/6e/8e/0d6e8e74b6265034cdca1583ca2d5d24.jpg",
     },
