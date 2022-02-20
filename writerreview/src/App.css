@@ -1,6 +1,18 @@
+header {
+  font-family: 'Redressed';
+  font-size:  100px;
+  color: purple;
+  margin-bottom: 20px;
+}
+
 body {
   align-items: center;
   text-align: center;
   font-family: 'Merriweather';
   padding: 50px 0;
+  background-color: #bfb196;
+}
+
+img {
+  filter: sepia(60%);
 }

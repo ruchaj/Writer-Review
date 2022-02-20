@@ -51,6 +51,10 @@ const App = () => {
   // if there's no user, show the login form
   return (
     <div>
+      <img src="https://64.media.tumblr.com/065dea6490e2a53f45c96f7e41bd1de9/bea1cc46afc040ef-78/s1280x1920/1a4f1fb802a6deb0e1eaf3fae093d8e28a77b58c.jpg"
+        width={200}
+      />
+      <header>WriterReview</header>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username: </label>
         <input
