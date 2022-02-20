@@ -1,45 +1,76 @@
-import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import './App.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-function App() {
-  const [email, setEmail] = useState("");
+const App = () => {
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState();
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setUser(foundUser);
+    }
+  }, []);
+
+  // logout the user
+  const handleLogout = () => {
+    setUser({});
+    setUsername("");
+    setPassword("");
+    localStorage.clear();
+  };
+
+  // login the user
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const user = { username, password };
+    // send the username and password to the server
+    const response = await axios.post(
+      "http://blogservice.herokuapp.com/api/login",
+      user
+    );
+    // set the state of the user
+    setUser(response.data);
+    // store the user in localStorage
+    localStorage.setItem("user", JSON.stringify(response.data));
+  };
+
+  // if there's a user show the message below
+  if (user) {
+    return (
+      <div>
+        {user.name} is loggged in
+        <button onClick={handleLogout}>logout</button>
+      </div>
+    );
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  // if there's no user, show the login form
   return (
-    <div className="Login">
-      <Form onSubmit={handleSubmit}>
-        <Form.Group size="lg" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            autoFocus
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group size="lg" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="username">Username: </label>
+        <input
+          type="text"
+          value={username}
+          placeholder="enter a username"
+          onChange={({ target }) => setUsername(target.value)}
+        />
+        <div>
+          <label htmlFor="password">password: </label>
+          <input
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            placeholder="enter a password"
+            onChange={({ target }) => setPassword(target.value)}
           />
-        </Form.Group>
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
-          Login
-        </Button>
-      </Form>
+        </div>
+        <button type="submit">Login</button>
+      </form>
     </div>
   );
-}
+};
 
 export default App;
